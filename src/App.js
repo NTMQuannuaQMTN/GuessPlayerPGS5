@@ -52,18 +52,18 @@ function App() {
       checkKills.className = "checkKills";
       let checkNation = document.createElement("div");
       checkNation.className = "checkNation";
-      let imgNat = `/img/nations/${players[playerNames.indexOf(playerInput.toLowerCase())].nation}.webp`
+      let imgNat = `/img/nations/${players[playerNames.indexOf(playerInput.toLowerCase())].nation.toLowerCase()}.webp`
       checkNation.innerHTML = `<img src="${imgNat}"></img>`;
       let checkTeam = document.createElement("div");
       checkTeam.className = "checkTeam";
-      let imgTeam = `/img/teams/${players[playerNames.indexOf(playerInput.toLowerCase())].team}.png`
+      let imgTeam = `/img/teams/${players[playerNames.indexOf(playerInput.toLowerCase())].team.toLowerCase()}.png`
       checkTeam.innerHTML = `<img src="${imgTeam}"></img>`;
       let checkRegion = document.createElement("div");
       checkRegion.className = "checkRegion";
       checkRegion.innerHTML = players[playerNames.indexOf(playerInput.toLowerCase())].region;
       let checkPlayer = document.createElement("div");
       checkPlayer.className = "checkPlayer";
-      let imgPl = `/img/players/${players[playerNames.indexOf(playerInput.toLowerCase())].name}.png`
+      let imgPl = `/img/players/${players[playerNames.indexOf(playerInput.toLowerCase())].name.toLowerCase()}.png`
       checkPlayer.innerHTML = `<img src="${imgPl}"></img>`;
       attDiv.appendChild(checkKills);
       attDiv.appendChild(checkNation);
@@ -144,7 +144,7 @@ function App() {
     suggestions.forEach(suggestion => {
       let option = document.createElement("div");
       option.classList.add("autocomplete-item");
-      let sugSrc = `/img/teams/${players[playerNames.indexOf(suggestion.toLowerCase())].team}.png`
+      let sugSrc = `/img/teams/${players[playerNames.indexOf(suggestion.toLowerCase())].team.toLowerCase()}.png`
       option.innerHTML = `<img src="${sugSrc}">
       </img><h1><span>${players[playerNames.indexOf(suggestion.toLowerCase())].name
         .substring(0, document.getElementById("player-answer").value.length)}</span>${players[playerNames
