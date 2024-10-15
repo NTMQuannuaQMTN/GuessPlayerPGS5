@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/GuessPlayerPGS5/static/css/main.bf4c4cd4.css",
+    "main.js": "/GuessPlayerPGS5/static/js/main.f658d1f9.js",
+    "static/js/453.095ff92b.chunk.js": "/GuessPlayerPGS5/static/js/453.095ff92b.chunk.js",
+    "index.html": "/GuessPlayerPGS5/index.html",
+    "main.bf4c4cd4.css.map": "/GuessPlayerPGS5/static/css/main.bf4c4cd4.css.map",
+    "main.f658d1f9.js.map": "/GuessPlayerPGS5/static/js/main.f658d1f9.js.map",
+    "453.095ff92b.chunk.js.map": "/GuessPlayerPGS5/static/js/453.095ff92b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf4c4cd4.css",
+    "static/js/main.f658d1f9.js"
+  ]
+}
