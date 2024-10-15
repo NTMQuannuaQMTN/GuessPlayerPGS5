@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto Condensed";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F6871F;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#invalid, #complete {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 67px;
+  text-align: center;
+  width: fit-content;
+  height: 0;
+  padding: 20px;
+  font-size: 20px;
+  color: white;
+  background-color: #EE312B;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+#complete {
+  background-color: #F6871F;
+}
+
+.header {
+  background-color: #EE312B;
+  color: white;
+  font-size: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100vw;
+  height: fit-content;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+}
+
+.header h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.start {
+  width: fit-content;
+  height: fit-content;
+  padding: 2px 15px;
+  background-color: #EE312B;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 3vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.start:hover {
+  translate: 3px -3px;
+  box-shadow: -3px 3px 3px #ffffff;
+}
+
+.start:active {
+  translate: 0 0;
+  box-shadow: none;
+}
+
+.player-guess img {
+  width: 80%;
+  height: 30vh;
+  object-fit: contain;
+}
+
+.player-guess {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  padding: 2vw;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  border: 1px solid black;
+  width: 500px;
+  height: 40vh;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3vh;
+}
+
+input[type="text"] {
+  position: relative;
+  width: 90%;
+  margin-top: 3vh;
+  border-radius: 1vh;
+  font-size: 15px;
+  padding: 10px;
+  font-weight: 600;
+}
+
+#autocomplete-list {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  min-height: 160px;
+  overflow: scroll;
+}
+
+.autocomplete-item {
+  z-index: 999;
+  display: flex;
+  width: 100%;
+  background-color: white;
+  height: 40px;
+  align-items: center;
+}
+
+.autocomplete-item:hover {
+  background-color: #bfbfbf;
+}
+
+.autocomplete-item img {
+  height: 40px;
+  width: 40px !important;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.autocomplete-item h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.autocomplete-item h1 span {
+  font-weight: 800;
+}
+
+#guesses {
+  width: 500px;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.att {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+}
+
+.att div {
+  width: calc(20% - 10px);
+  aspect-ratio: 1;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: #7C7C7C;
+  color: white;
+  font-size: 30px;
+  text-shadow: 2px 2px 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkKills.correct {
+  animation: turnGreen 0.5s ease forwards;
+}
+
+.checkNation.correct {
+  animation: turnGreen 0.5s ease forwards 0.5s;
+}
+
+.checkTeam.correct {
+  animation: turnGreen 0.5s ease forwards 1s;
+}
+
+.checkRegion.correct {
+  animation: turnGreen 0.5s ease forwards 1.5s;
+}
+
+.checkPlayer.correct {
+  animation: turnGreen 0.5s ease forwards 2s;
+}
+
+@keyframes turnGreen {
+  from {
+    background-color: #7c7c7c;
+  }
+  to {background-color: #449b44;}
+}
+
+.checkKills img {
+  width: 33%;
+  filter: drop-shadow(2px 2px 2px black);
+}
+
+.checkNation img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.checkPlayer img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  filter: drop-shadow(2px 2px 2px black);
+}
+
+.checkTeam img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  filter: drop-shadow(0px 0px 8px white);
+}
+
+.titles {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  font-size: 12px;
+}
+
+.titles h2 {
+  width: calc(20% - 10px);
+  margin: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    font-size: 2vw;
+  }
+
+  .player-guess {
+    width: calc(100% - 4vw);
+    margin-left: 0%;
+  }
+
+  .checkKills img {
+    width: 20px;
+    filter: drop-shadow(2px 2px 2px black);
+  }
+
+  .player-guess img {
+    width: 80%;
+  }
+
+  #guesses {
+    width: 100%;
+  }
+
+  .att div {
+    font-size: 20px;
+  }
+
+  .titles h2 {
+    font-size: 20px;
+  }
+}
